@@ -17,13 +17,14 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
     EditText editTextText, editTextTextPassword;
-    ListaUsuarios lista1 = new ListaUsuarios();
+    ListaUsuarios lista1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
+        lista1 = new ListaUsuarios(this);
         editTextText = findViewById(R.id.editTextText);
         editTextTextPassword = findViewById(R.id.editTextTextPassword);
         Button button = findViewById(R.id.button);
